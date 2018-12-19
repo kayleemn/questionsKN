@@ -1,4 +1,5 @@
 #Questions.py - Kaylee
+
 #init variables
 q1 = """ Question 1: How old is Drake?
 1) 29
@@ -9,6 +10,15 @@ q1 = """ Question 1: How old is Drake?
 
 a1= int(0)
 check1 = bool(False)
+score = int(0)
+
+#intro
+print("Welcome to my question quiz")
+print("In this progrm you'll be asked one question about my favorite artist!")
+print("You have 4 options to choose from")
+print("Pick your best guess!")
+print()
+print()
 
 #test
 print(q1)
@@ -21,11 +31,13 @@ while check1 == False:
             score = int(score+1)
             check1 = True
         elif 0 < a1 < 5: #acceptable
-            print("Got it!")
+            print("Okay got it.")
             check1 = True
         else:
             print("Please enter an integer between 0-5") #non-acceptable
     except ValueError:
         print("Um.. let's think a little harder")
         
-        
+ #score
+print("You got a ", score * 100, "%")
+
